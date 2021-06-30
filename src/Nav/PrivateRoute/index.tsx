@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { Redirect, Route } from "react-router";
+import { NavbarContext } from './../../Global/Context';
 
-function ProvateRoute() {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+const PrivateRoute = ({ children, ...rest }:any) => {
+  const  {Auth} = useContext(NavbarContext);
+  const { auth } = Auth;
+  console.log(Auth,"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+  
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+       auth ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: { from: location },
+            }}
+          />
+        )
+      }
+    />
+  );
+};
 
-export default ProvateRoute
+export default PrivateRoute;

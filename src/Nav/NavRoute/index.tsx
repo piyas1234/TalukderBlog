@@ -10,6 +10,11 @@ function NavRoute() {
       color: "white",
     },
     {
+      id: 23,
+      name: "Blog",
+      route: "/blog",
+      color: "white",
+    },{
       id: 2,
       name: "LiveClass",
       route: "/class",
@@ -35,11 +40,29 @@ function NavRoute() {
     },
     {
       id: 6,
+      name: "Admin",
+      route: "/user",
+      color: "white",
+       
+    },
+{
+      id: 6,
+      name: "login",
+      route: "/login",
+      color: "white",
+       
+    },
+
+{
+      id: 7,
       name: "Install NoW",
       route: "/install",
       color: "white",
       backgroud: "bg-success",
     },
+
+
+
   ];
   const navbody = {
     backgroundColor: "#8000ff",
