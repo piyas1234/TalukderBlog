@@ -1,18 +1,23 @@
 import React, { useContext, useState } from "react";
 import { NavbarContext } from "../../Global/Context";
 import Api from "./../../Global/Axios/Api";
-
+import { useHistory ,useLocation } from "react-router-dom";
 function Login() {
   const { Auth, setAuth } = useContext(NavbarContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
+  const history = useHistory()
+  const location = useLocation();
+  const { from }:any = location.state || { from: { pathname: '/user' } };
+
   const onSubmit = async () => {
     const User = await Api.post(`/auth/login`, {
       email,
       password,
     });
-    setAuth(User.data);
+    setAuth({...User.data,email});
+    history.push(from)
   };
   console.log(Auth);
   return (

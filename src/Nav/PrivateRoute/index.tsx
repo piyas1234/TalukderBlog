@@ -1,23 +1,20 @@
 import React, { useContext } from "react";
 import { Redirect, Route } from "react-router";
-import { NavbarContext } from './../../Global/Context';
+import { NavbarContext } from "./../../Global/Context";
 
-const PrivateRoute = ({ children, ...rest }:any) => {
-  const  {Auth} = useContext(NavbarContext);
-  const { auth } = Auth;
-  console.log(Auth,"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
-  
+const PrivateRoute = ({ component: Component, ...rest }: any) => {
+  const { Auth } = useContext(NavbarContext);
   return (
     <Route
       {...rest}
-      render={({ location }) =>
-       auth ? (
-          children
+      render={(props) =>
+        Auth.auth ? (
+          <Component {...props} />
         ) : (
           <Redirect
             to={{
               pathname: "/login",
-              state: { from: location },
+              state: { from: props.location },
             }}
           />
         )

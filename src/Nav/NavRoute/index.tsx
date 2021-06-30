@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { NavbarContext } from "./../../Global/Context";
 function NavRoute() {
+  const { Auth } = useContext(NavbarContext);
   const nav = [
     {
       id: 1,
@@ -14,7 +16,8 @@ function NavRoute() {
       name: "Blog",
       route: "/blog",
       color: "white",
-    },{
+    },
+    {
       id: 2,
       name: "LiveClass",
       route: "/class",
@@ -43,26 +46,21 @@ function NavRoute() {
       name: "Admin",
       route: "/user",
       color: "white",
-       
     },
-{
+    {
       id: 6,
-      name: "login",
-      route: "/login",
+      name: Auth.auth ? "Logout" : "Login",
+      route: Auth.auth ? "/logout" : "login",
       color: "white",
-       
     },
 
-{
+    {
       id: 7,
       name: "Install NoW",
       route: "/install",
       color: "white",
       backgroud: "bg-success",
     },
-
-
-
   ];
   const navbody = {
     backgroundColor: "#8000ff",
@@ -78,6 +76,7 @@ function NavRoute() {
     border: "1px double transparent",
     borderColor: "white",
   };
+
   return (
     <div>
       <Navbar style={navbody} expand="lg">

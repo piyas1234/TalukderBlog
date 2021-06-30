@@ -16,7 +16,7 @@ interface NavbarContextValue {
 export const NavbarContext = React.createContext<NavbarContextValue>({
   data: String,
   setData: () => {},
-  Auth: String,
+  Auth: {auth:Boolean},
   setAuth: () => {},
   loading: String,
   setLoading: () => {},
@@ -28,7 +28,7 @@ export const NavbarContext = React.createContext<NavbarContextValue>({
 
 const Context = (props: any) => {
   const [data, setData] = useState([]);
-  const [Auth, setAuth] = useState({});
+  const [Auth, setAuth] = useState({auth:false});
   const [loading, setLoading] = useState(true);
   const [Modal, setModal] = useState(false)
   const [ModalData, setModalData] = useState([])
