@@ -4,10 +4,13 @@ import {AiOutlineStar}  from 'react-icons/ai'
 function StudentsSay() {
     const fakeData = [1,1,1]
     return (
-        <div style={{fontFamily: "'Montserrat', sans-serif"}} className="container-fluid p-5 mt-5 shadow">
+        <div className="container-fluid p-5 mt-5">
+            <div className="p-4 shadow-lg">
             <h1>Whats out students says</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam, expedita doloremque reiciendis necessitatibus iste error molestias eaque! Voluptatem doloremque, aut esse neque enim non at delectus quas iusto quasi laboriosam?</p>
-            <div className="row">
+           
+            </div>
+             <div className="row">
                 {fakeData && fakeData.map(item=>{
                     return    <div className="gx-3 col-lg-4 col-md-6   text-center">
                     <div className="p-4 border">

@@ -26,7 +26,7 @@ function ShowModal() {
           </button>
         </div>
         <div className="vedioAria">
-          <video width="100%" height="50%" controls>
+          <video width="100%" height="450px" controls>
             <source src={array[number].vedio || item.vedio} type="video/mp4" />
           </video>
         </div>

@@ -6,13 +6,15 @@ function FreeVedios() {
   const { Modal, setModal, ModalData, setModalData } =
     useContext(NavbarContext);
   return (
-    <div className="container-fluid mt-5 p-5 shadow">
-      <h1> Free Concept Vedios</h1>
+    <div className="container-fluid mt-5 p-5   bg-white">
+       <div className="mb-5">
+       <h1> Free Concept Vedios</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
         quae provident quis illo ex odio rerum molestiae doloribus minima, eos
         hic dolores error natus corporis repellendus debitis est officia ipsum.
       </p>
+       </div>
       <div className="row">
         {fakeData.map((item, index, array) => {
           return (
@@ -23,10 +25,10 @@ function FreeVedios() {
               }}
               className="gx-3 col-md-6 col-lg-3"
             >
-              <div className="p-3">
+              <div  className="p-3  mb-4  text-info rounded border">
                 <img src="" alt="" />
                 <p>{item.title}</p>
-                <div className="border p-5 text-center bg-info">
+                <div className="rounded p-5 text-center shadow">
                   <GoPlay size={50} />
                 </div>
               </div>

@@ -29,7 +29,7 @@ function Study() {
         {fakeData &&
           fakeData.map((e) => (
             <div className="gx-3 col-md-6 col-lg-4">
-              <div className="p-4 border">
+              <div style={{backgroundColor:'#d02ed988'}} className="p-4 border text-white ">
                 <div className="d-flex">
                   <div className="bg-warning rounded p-3 h-75">
                     <FcPortraitMode size={100} />
@@ -45,23 +45,19 @@ function Study() {
                 </p>
                 <div className="d-flex">
                   <div>
-                    <a href="">Click Here</a>
+                    <a href="">Click Here...</a>
                     <br />
-                    <a href="">Click Here</a>
+                    <a href="">Click Here...</a>
                     <br />
-                    <a href="">Click Here</a>
-                    <br />
-                    <a href="">Click Here</a>
+                   
                     <br />
                   </div>{" "}
                   <div className="ml-auto">
-                    <a href="">Click Here</a>
+                    <a href="">Click Here..</a>
                     <br />
-                    <a href="">Click Here</a>
+                    <a href="">Click Here...</a>
                     <br />
-                    <a href="">Click Here</a>
-                    <br />
-                    <a href="">Click Here</a>
+                    
                     <br />
                   </div>
                 </div>

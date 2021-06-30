@@ -55,10 +55,10 @@ function Main() {
             </button>
           </div>
         </div>
-        <div style={styes.box} className="col-md-6 bg-info">
+        <div style={styes.box} className="col-md-6">
           <img
             width="100%"
-            src="https://th.bing.com/th/id/R40607512d90b6f26cef4b7fbdb34ef48?rik=92BN9ZqwTn9S%2bw&pid=ImgRaw"
+            src="https://cdn.dribbble.com/users/2133678/screenshots/5445213/serious_study_illustration_rgb_4x.jpg"
             alt=""
           />
         </div>
@@ -95,14 +95,14 @@ const styes = {
   },
   mainbox: {
     minHeight: "500px",
-    // boxShadow: "0px 0px 100px 0px gray",
-    // marginTop: "20px",
+    boxShadow: "110px 110px 1000px 110px #D92EC4",
+    marginTop: "20px",
   },
 
   box: {
     width: "100%",
     minHeight: "400px",
-    boxShadow: "10px 10px 10px 10px skyblue",
+    boxShadow: "0px 0px 100px 0px #8000ff",
   },
   title: {
     color: "#8000ff",
